@@ -1,0 +1,18 @@
+{
+  "name": "electron-test",
+  "version": "0.0.1-SNAPSHOT",
+  "main": "main.js",
+  "bin": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "publishConfig": {
+    "registry": "http://nexus3.coast.ebuero.de/nexus/repository/pinguin-npm-internal"
+  },
+  "dependencies": {
+    "electron-spellchecker": "0.0.1"
+  },
+  "devDependencies": {
+    "electron": "5.0.3"
+  }
+}

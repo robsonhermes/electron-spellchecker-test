@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <br><br>
+    Text area:<br>
+    <textarea rows="15" cols="50"></textarea>
+    <br><br><br>
+    Div with contenteditable
+    <div contenteditable="true" style="width:350px;height:200px;border:1px solid black;"/>
+
+    <script type="text/javascript" charset="utf-8">
+
+      const electronSpellchecker = require('electron-spellchecker');
+      const SpellCheckHandler = electronSpellchecker.SpellCheckHandler;
+      const DictionarySync = electronSpellchecker.DictionarySync;
+      const ContextMenuListener = electronSpellchecker.ContextMenuListener;
+      const ContextMenuBuilder = electronSpellchecker.ContextMenuBuilder;
+
+      window.spellCheckHandler = new SpellCheckHandler();
+      window.spellCheckHandler._automaticallyIdentifyLanguages = false;
+
+      var contextMenuBuilder = new ContextMenuBuilder(window.spellCheckHandler);
+      var contextMenuListener = new ContextMenuListener(async (info) => {
+    await contextMenuBuilder.showPopupMenu(info);
+      });
+
+      window.spellCheckHandler.switchLanguage('en-GB');
+      window.spellCheckHandler.attachToInput();
+
+    </script>
+  </body>
+</html>
