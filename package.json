@@ -6,9 +6,6 @@
   "scripts": {
     "start": "electron ."
   },
-  "publishConfig": {
-    "registry": "http://nexus3.coast.ebuero.de/nexus/repository/pinguin-npm-internal"
-  },
   "dependencies": {
     "electron-spellchecker": "0.0.1"
   },
