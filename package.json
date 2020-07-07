@@ -10,7 +10,7 @@
     "electron-spellchecker": "2.1.0"
   },
   "devDependencies": {
-    "electron": "5.0.3",
+    "electron": "9.1.0",
     "electron-rebuild": "1.8.5"
   }
 }
